@@ -60,6 +60,8 @@ ChromiumSWTBrowser
 			};
 		
 		browser.setData( BrowserWrapperSWTFactory.BROWSER_KEY, true );
+		
+		browser.ensureBuilt();
 	}
 
 	@Override
@@ -397,7 +399,10 @@ ChromiumSWTBrowser
 		public void
 		dispose()
 		{
-			swt_bf.dispose();
+			if (!swt_bf.getBrowser().isDisposed()){
+			
+				swt_bf.dispose();
+			}
 		}
 	}
 	
