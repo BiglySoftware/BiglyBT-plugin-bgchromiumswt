@@ -136,6 +136,8 @@ ChromiumSWTBrowser
 	getUrl()
 	{
 		return( browser.getUrl());
+		
+		//return( "" );
 	}
 
 	@Override
